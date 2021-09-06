@@ -1,7 +1,6 @@
 import React, { memo } from 'react'
 import { Grid, Skeleton } from '../../../components'
 import Card from './Card'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faViruses, faSkullCrossbones, faLungsVirus, faBookDead, faVirusSlash } from '@fortawesome/free-solid-svg-icons'
 
 function Board({ data }) {

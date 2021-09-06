@@ -1,15 +1,15 @@
 import React, { memo } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShare } from '@fortawesome/free-solid-svg-icons'
-import { Card, Typography, Button, Select, MenuItem } from '../../../components'
+import { Card, Button, Select, MenuItem } from '../../../components'
 import COUNTRIES from '../../../commons/constants/countries'
-import { AppCardTopLine1Styled, AppCardTopLine2Styled, AppLogoTop, AppShareStyled, AppTitlePart1Styled, AppTitlePart2Styled, AppUpdatedStyled, CardPanelContentStyled, ItemStyled } from './style'
+import { AppCardTopLine1Styled, AppCardTopLine2Styled, AppLogoTop, AppShareStyled, AppTitlePart1Styled, AppTitlePart2Styled, AppUpdatedStyled, ItemStyled } from './style'
 import LogoApp from '../../../assets/images/logo-app-72x72.png'
 
 const navigatorHasShare = navigator.share
 
 function Panel({ updateAt, onChange, data, country, getCoviddata }) {
-  const { cases, recovered, deaths, todayCases, todayDeaths } = data
+  const { recovered } = data
 
   const renderCountries = (country, index) => (
     <MenuItem key={`country-${index}`} value={country.value}>
